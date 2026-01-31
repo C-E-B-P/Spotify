@@ -310,37 +310,5 @@ footer {
 
 </div>
 
-<script>
-const gallery = document.getElementById("gallery");
-const slideSpeed = 1;
-let isPaused = false;
-let maxScroll = 0;
-
-window.addEventListener("load", () => {
-  gallery.innerHTML += gallery.innerHTML;
-  maxScroll = gallery.scrollWidth / 2;
-  startAutoSlide();
-});
-
-function autoScroll() {
-  if (!isPaused) {
-    gallery.scrollLeft += slideSpeed;
-
-    if (gallery.scrollLeft >= maxScroll) {
-      gallery.scrollLeft -= maxScroll;
-    }
-  }
-}
-
-function startAutoSlide() {
-  setInterval(autoScroll, 16);
-}
-
-gallery.addEventListener("touchstart", () => isPaused = true);
-gallery.addEventListener("touchend", () => isPaused = false);
-gallery.addEventListener("mouseenter", () => isPaused = true);
-gallery.addEventListener("mouseleave", () => isPaused = false);
-</script>
-
 </body>
 </html>
