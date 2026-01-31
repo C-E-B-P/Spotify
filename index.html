@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audify — Music Without Limits</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #0b0b0f;
+  --card: #15151d;
+  --primary: #7c7cff;
+  --accent: #00e0a4;
+  --text: #eaeaea;
+  --muted: #9aa0a6;
+  --radius: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+}
+
+header {
+  padding: 24px;
+}
+
+.logo {
+  font-size: 34px;
+  font-weight: 800;
+  background: linear-gradient(45deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero {
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.download-buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn {
+  padding: 14px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  background: linear-gradient(45deg, var(--primary), var(--accent));
+  color: white;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.section {
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 18px;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 14px;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.card p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* Screenshots Gallery */
+
+.gallery {
+  padding: 20px;
+}
+
+.screenshot-wrapper {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+
+.screenshot-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.screenshot {
+  min-width: 220px;
+  height: 440px;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #111;
+  scroll-snap-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: 0.3s;
+}
+
+.screenshot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.screenshot:hover {
+  transform: scale(1.03);
+}
+
+footer {
+  padding: 30px 20px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.glow {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #7c7cff33, transparent);
+  top: -50px;
+  right: -50px;
+  filter: blur(80px);
+  z-index: -1;
+}
+</style>
+</head>
+
+<body>
+
+<div class="glow"></div>
+
+<div class="container">
+
+<header>
+  <div class="logo">Audify</div>
+</header>
+
+<section class="hero">
+  <h1>Music Without Limits</h1>
+  <p>
+    Play any song or video from YT Music with background playback,
+    offline downloads, live lyrics, and advanced audio control —
+    all inside one powerful Android app.
+  </p>
+
+  <div class="download-buttons">
+    <a class="btn" href="https://github.com/C-E-B-P/Audify/raw/refs/heads/main/Audify_64bit.apk">
+      Download 64-bit APK
+    </a>
+    <a class="btn" href="https://github.com/C-E-B-P/Audify/raw/refs/heads/main/Audify_32bit.apk">
+      Download 32-bit APK
+    </a>
+  </div>
+</section>
+
+<section class="section gallery">
+  <div class="section-title">App Screenshots</div>
+  <div class="screenshot-wrapper" id="gallery">
+
+    <div class="screenshot">
+      <img src="images/1.jpg" alt="Audify Screenshot 1">
+    </div>
+
+    <div class="screenshot">
+      <img src="images/2.jpg" alt="Audify Screenshot 2">
+    </div>
+
+    <div class="screenshot">
+      <img src="images/3.jpg" alt="Audify Screenshot 3">
+    </div>
+
+    <div class="screenshot">
+      <img src="images/4.jpg" alt="Audify Screenshot 4">
+    </div>
+
+    <div class="screenshot">
+      <img src="images/5.jpg" alt="Audify Screenshot 5">
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-title">Core Features</div>
+
+  <div class="card">
+    <h3>Play Anything</h3>
+    <p>Stream any song or video directly from YT Music with smooth playback.</p>
+  </div>
+
+  <div class="card">
+    <h3>Background Playback</h3>
+    <p>Keep music playing while using other apps or when your screen is off.</p>
+  </div>
+
+  <div class="card">
+    <h3>Offline Downloads</h3>
+    <p>Download and cache songs for playback without internet.</p>
+  </div>
+
+  <div class="card">
+    <h3>Live Lyrics</h3>
+    <p>Sing along with real-time synchronized lyrics.</p>
+  </div>
+
+  <div class="card">
+    <h3>Account Sync</h3>
+    <p>Login to your YT Music account and sync songs, albums, artists and playlists.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-title">Advanced Controls</div>
+
+  <div class="card">
+    <h3>Audio Normalization</h3>
+    <p>Maintain consistent volume across tracks.</p>
+  </div>
+
+  <div class="card">
+    <h3>Tempo & Pitch Adjust</h3>
+    <p>Customize playback speed and pitch for any track.</p>
+  </div>
+
+  <div class="card">
+    <h3>Skip Silence</h3>
+    <p>Automatically skip silent parts for uninterrupted listening.</p>
+  </div>
+
+  <div class="card">
+    <h3>Playlist Management</h3>
+    <p>Import playlists, reorder songs, and manage your queue easily.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-title">Personalization</div>
+
+  <div class="card">
+    <h3>Quick Picks</h3>
+    <p>Personalized music recommendations tailored to your taste.</p>
+  </div>
+
+  <div class="card">
+    <h3>Theme Options</h3>
+    <p>Light, Dark, Black and Dynamic themes with Material 3 styling.</p>
+  </div>
+
+  <div class="card">
+    <h3>Sleep Timer</h3>
+    <p>Automatically stop playback when you fall asleep.</p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Audify — Designed for music lovers 🎧
+</footer>
+
+</div>
+
+<script>
+const gallery = document.getElementById("gallery");
+const slideSpeed = 1;
+let isPaused = false;
+let maxScroll = 0;
+
+window.addEventListener("load", () => {
+  gallery.innerHTML += gallery.innerHTML;
+  maxScroll = gallery.scrollWidth / 2;
+  startAutoSlide();
+});
+
+function autoScroll() {
+  if (!isPaused) {
+    gallery.scrollLeft += slideSpeed;
+
+    if (gallery.scrollLeft >= maxScroll) {
+      gallery.scrollLeft -= maxScroll;
+    }
+  }
+}
+
+function startAutoSlide() {
+  setInterval(autoScroll, 16);
+}
+
+gallery.addEventListener("touchstart", () => isPaused = true);
+gallery.addEventListener("touchend", () => isPaused = false);
+gallery.addEventListener("mouseenter", () => isPaused = true);
+gallery.addEventListener("mouseleave", () => isPaused = false);
+</script>
+
+</body>
+</html>
